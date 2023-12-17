@@ -4,6 +4,10 @@ class DragonopsCli < Formula
   url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/dragonops-cli_0.0.1-darwin-amd64.zip"
   sha256 "558022c538f0fb08c56a71b1b8ad4d3e2883c8c1e53a902d2b868918a14423c8"
   license ""
+  
+  install do
+     bin.install "dragonops-cli"
+  end
 
   test do
     system "#{bin}/dragonops-cli", "--version"
