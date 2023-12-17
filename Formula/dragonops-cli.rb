@@ -5,7 +5,7 @@ class DragonopsCli < Formula
   sha256 "558022c538f0fb08c56a71b1b8ad4d3e2883c8c1e53a902d2b868918a14423c8"
   license ""
   
-  install do
+  def install
      bin.install "dragonops-cli"
   end
 
