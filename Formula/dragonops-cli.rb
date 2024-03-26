@@ -11,10 +11,10 @@ class DragonopsCli < Formula
     sha256 "230336d020c2d852a1db7b3c81071fe93b679553d10157a3c3237074aacd260a"
   end
   def install
-    bin.install "docli"
+    bin.install "dragonops-cli"
   end
 
   test do
-    system "#{bin}/docli", "--version"
+    system "#{bin}/dragonops-cli", "--version"
   end
 end
