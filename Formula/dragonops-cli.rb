@@ -3,15 +3,15 @@ class DragonopsCli < Formula
   homepage "https://github.com/DragonOps-io/homebrew-tap"
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/dragonops-cli_0.0.10-darwin-amd64.zip"
-    sha256 "deb0914b7b3ee7152870c134f82c47e2d4ecada52e3aeac4e6b54d60e8b5d66e"
+    url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/dragonops-cli_0.0.12-darwin-amd64.zip"
+    sha256 "3eed670ecc550b6aeda7fc8fe0deeb6554088bd3e969b0d11a17a5630c1e501b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/dragonops-cli_0.0.10-darwin-arm64.zip"
-    sha256 "8e65a2522c901e0b3fc5e4e03203797ad0c215c5dd98647568d34549287b28af"
+    url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/dragonops-cli_0.0.12-darwin-arm64.zip"
+    sha256 "7be93a9de385f521cf47a5034f1f287568eb0fecc6369858da847efc86b1276e"
   end
   def install
-    bin.install "cli"
+    bin.install "docli"
   end
 
   test do
