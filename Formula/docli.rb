@@ -5,20 +5,20 @@
 class Docli < Formula
   desc "DragonOps CLI to deploy and manage cloud infrastructure"
   homepage "https://github.com/DragonOps-io/homebrew-tap"
-  version "0.0.23"
+  version "0.0.25"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/DragonOps-io/docli/releases/download/v0.0.23/docli_Darwin_x86_64.tar.gz"
-      sha256 "66e8281810663192aa286a0a32ba70fba6beb71209bbd0349aee0c9c2b096dbc"
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.25/docli_Darwin_x86_64.tar.gz"
+      sha256 "e752066da2fc5cffaafd5fc471c92020acb0995f67641b0c9b7ca4a13500e435"
 
       def install
         bin.install "docli"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/DragonOps-io/docli/releases/download/v0.0.23/docli_Darwin_arm64.tar.gz"
-      sha256 "dfc4f3c4b5767a8b80819923217a5a4abbc2efbcbfc386000e70eb45c27810f6"
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.25/docli_Darwin_arm64.tar.gz"
+      sha256 "3b2335c7d4c9a5070590364e892f05839b32ad02b02664f35fe15835a74dc598"
 
       def install
         bin.install "docli"
@@ -27,25 +27,25 @@ class Docli < Formula
   end
 
   on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.25/docli_Linux_arm64.tar.gz"
+      sha256 "d6f3c3e104cbcc213ca734fa36aaaf734784151b8b4530158b2dbaa076842b50"
+
+      def install
+        bin.install "docli"
+      end
+    end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/DragonOps-io/docli/releases/download/v0.0.23/docli_Linux_armv6.tar.gz"
-      sha256 "21fcf97198d5746668f0e5147a98461368decaf3953ce8d0ccffc432d45bea2b"
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.25/docli_Linux_armv6.tar.gz"
+      sha256 "cd74308a059de5a8a93fdaa6eccd19629fae11c212d32610626efe0556d1dba3"
 
       def install
         bin.install "docli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/DragonOps-io/docli/releases/download/v0.0.23/docli_Linux_x86_64.tar.gz"
-      sha256 "50c122d53775d00ec2ea4c77907ca27731cd21b9c7284aa64fb8a49b018d60c4"
-
-      def install
-        bin.install "docli"
-      end
-    end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/DragonOps-io/docli/releases/download/v0.0.23/docli_Linux_arm64.tar.gz"
-      sha256 "9f8c0adf51acc0e76329fd37b3181c20441c4ed6c85126308f9e1c0293e5dcad"
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.25/docli_Linux_x86_64.tar.gz"
+      sha256 "436c4a168ab875b47b0c468134b527aeeaa2444e003f0658e178f29d70a056e9"
 
       def install
         bin.install "docli"
