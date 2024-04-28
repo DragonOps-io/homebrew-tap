@@ -10,7 +10,7 @@ class Dragonops < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.84/docli_Darwin_x86_64.tar.gz"
-      sha256 "f1f5e79861f396809f7a19f5ebebb9df6a34c3f150ed26b542089cca673f7e7c"
+      sha256 "b42b99fb52d4e6749b83eb824ca1d482fc2e6c071724bd89e2612ef9566babfb"
 
       def install
         bin.install "dragonops"
@@ -18,7 +18,7 @@ class Dragonops < Formula
     end
     if Hardware::CPU.arm?
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.84/docli_Darwin_arm64.tar.gz"
-      sha256 "d992f029860530f8993e5c5150188811fb02d93e0eafba887e52539bad5cda73"
+      sha256 "77a8629e7d3b347456701505601d0883931871cdc1d890bf127cf0f24cc39fdc"
 
       def install
         bin.install "dragonops"
@@ -29,7 +29,7 @@ class Dragonops < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.84/docli_Linux_x86_64.tar.gz"
-      sha256 "608e4b5b1336f2ba72c8628ce185e7cd1d7988214e766635fc1521801351b862"
+      sha256 "a9ccc5d169f39e4d9f7b6a0afee8767b2e52505d40d646dbe4f1f705c52e76e9"
 
       def install
         bin.install "dragonops"
@@ -37,7 +37,7 @@ class Dragonops < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.84/docli_Linux_armv6.tar.gz"
-      sha256 "2587ef82b8b09f5b4f5bd5d028e724382b0ca4d7ddc502a3485ea60c384b1974"
+      sha256 "fa3c7eb9d5c56cc6186ab5d2fa98de6679e4d71101f6bf8ed91edc80096130a7"
 
       def install
         bin.install "dragonops"
@@ -45,7 +45,7 @@ class Dragonops < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.84/docli_Linux_arm64.tar.gz"
-      sha256 "4d0270407f993e7718dc1033d7d5dcc322200cc01a519067c5c21e8059772236"
+      sha256 "0497a705a7bba3df1a4dce4c8cf96cf3e7250c46780d87ce4362ae163ae6e69a"
 
       def install
         bin.install "dragonops"
