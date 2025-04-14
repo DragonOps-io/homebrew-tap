@@ -10,7 +10,7 @@ class Dragonops < Formula
   on_macos do
     on_intel do
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Darwin_x86_64.tar.gz"
-      sha256 "30ffdd9a674c8e8c4d2263b7d84cb8f0bbca96410fef2546d10c1c28ee74bc82"
+      sha256 "61cb65c9191534fd3f56c4bbd4e7bf35518339c062a089c080a594b6a57762d7"
 
       def install
         bin.install "dragonops"
@@ -18,7 +18,7 @@ class Dragonops < Formula
     end
     on_arm do
       url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Darwin_arm64.tar.gz"
-      sha256 "ccc10ae7d0131dad999b11f973e086bcc0924bcb4406e0275db5df9d3e7834a9"
+      sha256 "e149d63ae40d54490d6a746f85018abc7e4359201328d97acb05b17879549761"
 
       def install
         bin.install "dragonops"
@@ -30,7 +30,7 @@ class Dragonops < Formula
     on_intel do
       if Hardware::CPU.is_64_bit?
         url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Linux_x86_64.tar.gz"
-        sha256 "e98213760d796c9a268b4f62a6efb0c7ded6ef72d89b8d13a3c8d0ca36f8181f"
+        sha256 "5c3109eaaba146f2d660f3d1dc2a2ef09224ee6fe9a36e30287e380732b96690"
 
         def install
           bin.install "dragonops"
@@ -40,7 +40,7 @@ class Dragonops < Formula
     on_arm do
       if !Hardware::CPU.is_64_bit?
         url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Linux_armv6.tar.gz"
-        sha256 "1cfa94ccf0d1e73f2478421209507d09684164bc035ab3b7970cdf6a12d349d0"
+        sha256 "fc12a2b16e15263022bd33a1ff51278796557285cc01ec8380223627c70077c7"
 
         def install
           bin.install "dragonops"
@@ -50,7 +50,7 @@ class Dragonops < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Linux_arm64.tar.gz"
-        sha256 "a7d8b528f743e423c6343baa7eeefca16d67456cd5d1a9f5fa1f117d26ab3056"
+        sha256 "70c32e1ff538235029e1182095734db0bc102c82ab5b6c01df98a0b778e3d799"
 
         def install
           bin.install "dragonops"
