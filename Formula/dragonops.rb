@@ -5,20 +5,20 @@
 class Dragonops < Formula
   desc "DragonOps CLI to deploy and manage cloud infrastructure"
   homepage "https://github.com/DragonOps-io/homebrew-tap"
-  version "0.0.119"
+  version "0.0.120"
 
   on_macos do
     on_intel do
-      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.119/docli_Darwin_x86_64.tar.gz"
-      sha256 "458d6d2ecc7e62554e96708db65312f0f0ec6d373f0a8e879e0d1e17dd29b829"
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Darwin_x86_64.tar.gz"
+      sha256 "30ffdd9a674c8e8c4d2263b7d84cb8f0bbca96410fef2546d10c1c28ee74bc82"
 
       def install
         bin.install "dragonops"
       end
     end
     on_arm do
-      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.119/docli_Darwin_arm64.tar.gz"
-      sha256 "5a55ac60954c57fe8e6397e288c7dec2c4987e4e0c4bec1817d9ea158179dab8"
+      url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Darwin_arm64.tar.gz"
+      sha256 "ccc10ae7d0131dad999b11f973e086bcc0924bcb4406e0275db5df9d3e7834a9"
 
       def install
         bin.install "dragonops"
@@ -29,8 +29,8 @@ class Dragonops < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.119/docli_Linux_x86_64.tar.gz"
-        sha256 "4d202c9703b7993044fab1f45966b8fe39f66530dcf8f796ee4184f3ef9e9375"
+        url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Linux_x86_64.tar.gz"
+        sha256 "e98213760d796c9a268b4f62a6efb0c7ded6ef72d89b8d13a3c8d0ca36f8181f"
 
         def install
           bin.install "dragonops"
@@ -39,8 +39,8 @@ class Dragonops < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.119/docli_Linux_armv6.tar.gz"
-        sha256 "4b88739af087a1f95b6df9e26a5c0ba1dc1325ef1d858a3337ac221ff403621e"
+        url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Linux_armv6.tar.gz"
+        sha256 "1cfa94ccf0d1e73f2478421209507d09684164bc035ab3b7970cdf6a12d349d0"
 
         def install
           bin.install "dragonops"
@@ -49,8 +49,8 @@ class Dragonops < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.119/docli_Linux_arm64.tar.gz"
-        sha256 "85a4e13a12800e6b99984b465c475f259d16f61f2e799888a6853446936e76f7"
+        url "https://dragonops-cli-releases.s3.amazonaws.com/dragonops-cli/0.0.120/docli_Linux_arm64.tar.gz"
+        sha256 "a7d8b528f743e423c6343baa7eeefca16d67456cd5d1a9f5fa1f117d26ab3056"
 
         def install
           bin.install "dragonops"
